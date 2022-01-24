@@ -9,7 +9,7 @@ jobs:
    runs-on: ubuntu-latest
    steps: 
      - name: Checkout
-       uses: action/checkout@v1
+       uses: actions/checkout@v1
      - name: Instalar as deps do server
        uses: bahmutov/npm-install@v1
        with: 
