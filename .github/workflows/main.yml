@@ -7,21 +7,26 @@ on:
 jobs: 
   cypress-run:
    runs-on: ubuntu-latest
+   
    steps: 
      - name: Setup Node.js environment
        uses: actions/setup-node@v2.5.1
        with:
-        node-version: 15.x
+        node-version: 17.x
+        
      - name: Checkout
        uses: actions/checkout@v1
+       
      - name: Instalar as deps do server
        uses: bahmutov/npm-install@v1
        with: 
          working-directory: server
+         
      - name: Instalar as deps do web
        uses: bahmutov/npm-install@v1
        with: 
          working-directory: web
+         
      - name: Componet & API & UI Tests
        uses: cypress-io/github-action@v2
        with:
