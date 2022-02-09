@@ -8,6 +8,10 @@ jobs:
   cypress-run:
    runs-on: ubuntu-latest
    steps: 
+     - name: Setup Node.js environment
+       uses: actions/setup-node@v2.5.1
+       with:
+        node-version: 14.x
      - name: Checkout
        uses: actions/checkout@v1
      - name: Instalar as deps do server
